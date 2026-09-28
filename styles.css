@@ -8,3 +8,5 @@
 @media(prefers-reduced-motion:reduce){.client-grid{scroll-behavior:auto}}
 .client-logo-dark{background:var(--blue);padding:12px}
 @media(max-width:760px){.mobile-hidden-arrow{display:none}}
+@media(max-width:760px){.clients.section{padding-top:42px;padding-bottom:48px}.clients .section-heading{margin:0 0 18px}.clients .section-heading h2{margin:0 0 6px}.clients .client-controls{margin-top:8px}.clients .steps-heading{margin-top:32px}}
+@media(min-width:761px){.clients.section{padding-top:38px;padding-bottom:28px}.clients .section-heading{margin:0 0 18px}.clients .section-heading h2{margin:0}.clients .client-controls{padding-bottom:0}.clients .steps-heading{margin:24px 0 8px}.clients .steps-heading h2{margin:0}.clients .steps .step{padding-top:14px}.clients .steps .step h3{margin:8px 0 4px}}
