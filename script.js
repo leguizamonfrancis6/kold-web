@@ -6,7 +6,7 @@ const counter = document.querySelector('#counter');
 const formStatus = document.querySelector('#form-status');
 const heroVideo = document.querySelector('.hero-video');
 const heroSection = document.querySelector('.hero');
-const shouldLoadHeroVideo = !window.matchMedia('(max-width: 760px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const shouldLoadHeroVideo = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 if (!shouldLoadHeroVideo && heroVideo) {
   heroVideo.remove();
@@ -16,7 +16,8 @@ const loadHeroVideo = () => {
   if (!heroVideo || heroVideo.dataset.loaded === 'true') return;
 
   const source = document.createElement('source');
-  source.src = heroVideo.dataset.src;
+  const isMobileViewport = window.matchMedia('(max-width: 760px)').matches;
+  source.src = isMobileViewport ? heroVideo.dataset.mobileSrc : heroVideo.dataset.src;
   source.type = 'video/mp4';
   heroVideo.appendChild(source);
   heroVideo.dataset.loaded = 'true';
