@@ -99,7 +99,8 @@ if (contactForm) {
         body: new FormData(contactForm),
         headers: { Accept: 'application/json' },
       });
-      if (!response.ok) throw new Error('No se pudo enviar');
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || String(result.success) === 'false') throw new Error('No se pudo enviar');
       contactForm.reset();
       counter.textContent = '0/500';
       formStatus.textContent = 'Gracias. Recibimos tu consulta y te contactaremos pronto.';

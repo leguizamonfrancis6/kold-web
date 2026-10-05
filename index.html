@@ -39,7 +39,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body>
     <header class="site-header">
@@ -102,8 +102,10 @@
           </div></div>
           <div class="contact-actions">
             <a class="whatsapp-card" href="https://wa.me/543424364254?text=Hola%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noreferrer"><strong>Escribinos por WhatsApp</strong><span>+54 342 436-4254 <span class="mobile-hidden-arrow" aria-hidden="true">↗</span></span></a>
-            <form class="contact-form" id="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
-              <!-- Reemplazá TU_ID_DE_FORMSPREE por el ID que te entrega Formspree al crear el formulario. -->
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/ajax/kold.refrigeracion@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="Nueva consulta desde koldrefrigeracion.com.ar" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
               <label>Email<input type="email" name="email" required autocomplete="email" /></label>
               <label>Nombre<input type="text" name="nombre" required autocomplete="name" /></label>
               <label>Consulta<textarea name="consulta" maxlength="500" required></textarea><span class="counter" id="counter">0/500</span></label>
@@ -116,6 +118,6 @@
     </main>
 
     <footer class="site-footer"><a class="brand" href="#inicio">Kold Refrigeración</a><p>kold.refrigeracion@gmail.com · +54 342 436-4254</p><p>© 2026 Kold Refrigeración</p></footer>
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>
